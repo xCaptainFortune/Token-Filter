@@ -1,0 +1,20 @@
+{
+  "name": "28-deploy-flashloan-smart-contract",
+  "description": "",
+  "main": "run-arbitrage.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apefinance/sdk": "^0.1.3",
+    "@pancakeswap/sdk": "^2.4.0",
+    "@truffle/hdwallet-provider": "^2.0.0",
+    "ansi-colors": "^4.1.1",
+    "dotenv": "^10.0.0",
+    "ethers": "^5.5.3",
+    "lodash": "^4.17.21",
+    "web3": "^1.7.3"
+  }
+}
