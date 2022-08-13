@@ -3,7 +3,7 @@
 A pratical example on how to perform multiple type of filters on millions of pairs. 
 The goal of this repo is to be used as a low barrier of entry reference source code for aspiring new searchers (hence, JavaScript). 
 
-. This bot contains:
+This bot contains:
 - filtering pairs by tokens present. You can filter for pairs that have a busd/wbnb/usdc/dai pool for a certain token and even require that all of them/one of them/two of them be present by slightly modifying the code. I was writing an arbitrage bot that went from eth -> token -> usdc and so needed to check that an existing token had both an eth and usdc pool otherwise I would discard it from my tokens-to-arb list.
 - filtering pairs by TAX/HONEYPOT/BUY DIVERSION. After filtering pairs by tokens present, this bot filters tokens that are not worth frontrunning/arbing over. Mainly those for which you lose a certain % of your trade after buying then selling. You can choose your fee tolerance accordingly, 1%, 2%, 5% etc
 - filtering pairs by Reserves amount. You might not want to arb over pairs that have too little reserves as you will suffer from too much slippage and it is better if you ignore them. In this bot I filtered tokens that had less than 1000 busd in their token/BUSD Reserves. 
