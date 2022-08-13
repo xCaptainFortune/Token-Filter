@@ -314,7 +314,7 @@ const pairABI = [
     ]
 
 for(let i = 0; i < tokens.length; i++ ) {
-var processedData = tpContract.encodeFunctionData( 					//we have a 1% fee tolerance because we're accounting for the dex Fee
+var processedData = tpContract.encodeFunctionData( 		//we have a 1% (0.01) fee tolerance because we're accounting for the dex Fee
     'tokenToleranceCheck', [tokens[i], ethIn, ethers.utils.parseUnits("0.01", "ether") ] //token address
 );
 var checkTxn = {
@@ -323,7 +323,7 @@ var checkTxn = {
     data: processedData,
     value: ethIn,
     gasPrice: ethers.BigNumber.from(13),
-    gasLimit: ethers.BigNumber.from(6500000), //for txn fee scam check              
+    gasLimit: ethers.BigNumber.from(6500000),           
 }
    //we check token fee whitout wasting any gas: .call() only simulates a tx and we pretend to send from an address that has enough bnb (bnbReserveAddress)
 try {
